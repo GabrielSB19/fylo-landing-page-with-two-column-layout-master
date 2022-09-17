@@ -1,9 +1,18 @@
 @use 'variable';
+@use 'initial';
+@use 'mixin';
 
-body{
-    font-family: variable.$Body-Font;
+.main-container{
+    border: 1px solid red;
+    width: 375px;
+    margin: auto;
 }
 
+@media (min-width: 1440px){
+    .main-container{
+        border: 1px solid red;
+        width: 1440px;
+        margin: auto;
+    }
+}
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }

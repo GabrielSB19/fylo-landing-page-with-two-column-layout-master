@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  color: hsl(243deg, 87%, 12%);
   font-family: "Open Sans", sans-serif;
 }
 
@@ -10,6 +17,20 @@ body {
 
 .attribution a {
   color: hsl(228deg, 45%, 44%);
+}
+
+.main-container {
+  border: 1px solid red;
+  width: 375px;
+  margin: auto;
+}
+
+@media (min-width: 1440px) {
+  .main-container {
+    border: 1px solid red;
+    width: 1440px;
+    margin: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
