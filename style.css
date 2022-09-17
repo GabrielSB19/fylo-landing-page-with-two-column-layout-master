@@ -24,13 +24,107 @@ body {
   width: 375px;
   margin: auto;
 }
-
 @media (min-width: 1440px) {
   .main-container {
-    border: 1px solid red;
     width: 1440px;
-    margin: auto;
+    height: unset;
+    font-size: unset;
   }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 24px 0;
+  margin-bottom: 100px;
+}
+.navbar__logo {
+  width: 80px;
+  height: 25px;
+}
+@media (min-width: 1440px) {
+  .navbar__logo {
+    width: 170px;
+    height: unset;
+    font-size: unset;
+  }
+}
+.navbar__nav-container {
+  display: flex;
+  width: 167px;
+  font-size: 0.8em;
+  justify-content: space-between;
+}
+@media (min-width: 1440px) {
+  .navbar__nav-container {
+    width: 274px;
+    height: unset;
+    font-size: 1em;
+  }
+}
+.navbar__nav-container li {
+  list-style: none;
+}
+.navbar__nav-container a {
+  text-decoration: none;
+}
+.navbar__nav-container a:hover {
+  color: hsl(224deg, 93%, 58%);
+}
+
+.header {
+  border: 1px solid black;
+  padding: 0 24px 182px;
+}
+.header__ilustration {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.header .header-content__title {
+  font-size: 1.5em;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  line-height: 35px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+.header .header-content__description {
+  text-align: center;
+  font-size: 0.95em;
+  margin-bottom: 30px;
+}
+.header .header-content__form {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: space-between;
+}
+.header .header-content__form input {
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid hsl(0deg, 0%, 75%);
+}
+.header .header-content__form input[type=text] {
+  padding-left: 15px;
+}
+.header .header-content__form input[type=text]::placeholder {
+  color: hsl(0deg, 0%, 75%);
+}
+.header .header-content__form input[type=submit] {
+  background-color: hsl(224deg, 93%, 58%);
+  color: hsl(240deg, 75%, 98%);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 0.9em;
+  border: none;
+}
+.header .header-content__form input[type=submit]:hover {
+  cursor: pointer;
+  filter: brightness(120%);
+}
+
+.details__ilustration {
+  width: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
