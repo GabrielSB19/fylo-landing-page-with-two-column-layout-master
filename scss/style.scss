@@ -47,10 +47,11 @@
         repeat: no-repeat;
         position-y: bottom; 
     }
-
+    @include mixin.section-desktop-view(38px);
     &__ilustration{
         width: 100%;
         margin-bottom: 40px;
+        @include mixin.ilustration-desktop-view;
     }
     .header-content{
         &__title{
@@ -92,6 +93,29 @@
 @media(min-width:1440px){
     .header{
         background-image: url(../images/bg-curve-desktop.svg);
+        height: 720px;
+        .header-content{
+            width: 590px;
+            &__title{
+                text-align: left;
+                font-size: 2.5em;
+                line-height: 60px;
+            }
+            &__description{
+                text-align: left;
+                font-size: 1.15em;
+            }
+            &__form{
+                flex-direction: row;
+                gap: 15px;
+                width: 540px;
+                height: 50px;
+            }
+            &__form input{
+                height: 50px;
+                flex-grow: 1;
+            }
+        }
     }
 }
 
@@ -99,9 +123,11 @@
     background-color: variable.$LightGrayishBlue;
     height: 900px;
     padding: 0 24px;
+    @include mixin.section-desktop-view(65px);
     &__ilustration{
         width: 100%;
         margin-bottom: 80px;
+        @include mixin.ilustration-desktop-view;
     }
     .details-content{
         &__title{

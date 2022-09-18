@@ -107,9 +107,22 @@ body {
   background-repeat: no-repeat;
   background-position-y: bottom;
 }
+@media (min-width: 1440px) {
+  .header {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 38px;
+  }
+}
 .header__ilustration {
   width: 100%;
   margin-bottom: 40px;
+}
+@media (min-width: 1440px) {
+  .header__ilustration {
+    width: 640px;
+  }
 }
 .header .header-content__title {
   font-size: 1.5em;
@@ -157,6 +170,29 @@ body {
 @media (min-width: 1440px) {
   .header {
     background-image: url(../images/bg-curve-desktop.svg);
+    height: 720px;
+  }
+  .header .header-content {
+    width: 590px;
+  }
+  .header .header-content__title {
+    text-align: left;
+    font-size: 2.5em;
+    line-height: 60px;
+  }
+  .header .header-content__description {
+    text-align: left;
+    font-size: 1.15em;
+  }
+  .header .header-content__form {
+    flex-direction: row;
+    gap: 15px;
+    width: 540px;
+    height: 50px;
+  }
+  .header .header-content__form input {
+    height: 50px;
+    flex-grow: 1;
   }
 }
 .details {
@@ -164,9 +200,22 @@ body {
   height: 900px;
   padding: 0 24px;
 }
+@media (min-width: 1440px) {
+  .details {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 65px;
+  }
+}
 .details__ilustration {
   width: 100%;
   margin-bottom: 80px;
+}
+@media (min-width: 1440px) {
+  .details__ilustration {
+    width: 640px;
+  }
 }
 .details .details-content__title {
   font-size: 1.5em;

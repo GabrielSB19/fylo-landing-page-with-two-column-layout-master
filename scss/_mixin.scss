@@ -20,3 +20,18 @@
         filter: brightness(120%);
     }
 }
+
+@mixin ilustration-desktop-view{
+    @media (min-width:1440px) {
+        width: 640px;
+    }
+}
+
+@mixin section-desktop-view ($gap){
+    @media(min-width:1440px){
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: $gap;
+    }
+}
