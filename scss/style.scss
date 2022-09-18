@@ -1,6 +1,7 @@
 @use 'variable';
 @use 'initial';
 @use 'mixin';
+@use 'card';
 
 .main-container{
     border: 1px solid red;
@@ -30,6 +31,7 @@
         }
         a{
             text-decoration: none;
+            color: variable.$VeryDarkBlue;
             &:hover{
                 color: variable.$BrightBlue;
             }
@@ -38,8 +40,14 @@
 }
 
 .header{
-    border: 1px solid black;
     padding: 0 24px 182px;
+
+    background: {
+        image: url(../images/bg-curve-mobile.svg);
+        repeat: no-repeat;
+        position-y: bottom; 
+    }
+
     &__ilustration{
         width: 100%;
         margin-bottom: 40px;
@@ -81,7 +89,38 @@
     }
 }
 
+@media(min-width:1440px){
+    .header{
+        background-image: url(../images/bg-curve-desktop.svg);
+    }
+}
 
-.details__ilustration{
-    width: 10px;
+.details{
+    background-color: variable.$LightGrayishBlue;
+    height: 900px;
+    padding: 0 24px;
+    &__ilustration{
+        width: 100%;
+        margin-bottom: 80px;
+    }
+    .details-content{
+        &__title{
+            font-size: 1.5em;
+            font-family: variable.$Heading-Font;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        &__paragraph{
+            margin-bottom: 25px;
+            line-height: 20px;
+            font-size: 0.86em;
+        }
+        &__link{
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+            color: variable.$ModerateCyan;
+        }
+    }
 }
