@@ -52,6 +52,74 @@ body {
     margin: 0;
   }
 }
+.early-access {
+  border: 1px solid red;
+  background-color: hsl(238deg, 22%, 44%);
+  color: hsl(0deg, 0%, 75%);
+  padding: 58px 62px 69px 38px;
+}
+@media (min-width: 1440px) {
+  .early-access {
+    display: flex;
+    align-items: center;
+    gap: 244px;
+  }
+}
+.early-access__title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 28px;
+}
+.early-access__description {
+  text-align: center;
+  font-size: 0.9em;
+  margin-bottom: 28px;
+}
+.early-access__form {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: space-between;
+}
+.early-access__form input {
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid hsl(0deg, 0%, 75%);
+}
+.early-access__form input[type=text] {
+  padding-left: 15px;
+}
+.early-access__form input[type=text]::placeholder {
+  color: hsl(0deg, 0%, 75%);
+}
+.early-access__form input[type=submit] {
+  background-color: hsl(224deg, 93%, 58%);
+  color: hsl(240deg, 75%, 98%);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 0.9em;
+  border: none;
+}
+.early-access__form input[type=submit]:hover {
+  cursor: pointer;
+  filter: brightness(120%);
+}
+
+@media (min-width: 1440px) {
+  .early-access__title {
+    text-align: left;
+  }
+  .early-access__description {
+    text-align: left;
+  }
+  .early-access__form {
+    width: 484px;
+  }
+  .early-access__form input[type=submit] {
+    width: 50%;
+    font-size: 0.8em;
+  }
+}
 .main-container {
   border: 1px solid red;
   width: 375px;

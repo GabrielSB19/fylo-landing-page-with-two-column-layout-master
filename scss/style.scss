@@ -2,6 +2,7 @@
 @use 'initial';
 @use 'mixin';
 @use 'card';
+@use 'earlyAccess';
 
 .main-container{
     border: 1px solid red;
@@ -47,7 +48,7 @@
         repeat: no-repeat;
         position-y: bottom; 
     }
-    @include mixin.section-desktop-view(38px);
+    @include mixin.section-desktop-view(38px, true);
     &__ilustration{
         width: 100%;
         margin-bottom: 40px;
@@ -68,25 +69,8 @@
             margin-bottom: 30px;
         }
         &__form{
-            display: flex;
-            flex-direction: column;
-            height: 100px;
-            justify-content: space-between;
+            @include mixin.form;
         }
-        &__form input{
-            height: 40px;
-            border-radius: 4px;
-            border: 1px solid variable.$LightGray;
-        }
-       &__form input[type="text"]{
-             padding-left: 15px;
-        }
-        &__form input[type="text"]::placeholder{
-            color: variable.$LightGray;
-        }
-        &__form input[type="submit"]{
-            @include mixin.button;
-       }
     }
 }
 
@@ -123,7 +107,7 @@
     background-color: variable.$LightGrayishBlue;
     height: 900px;
     padding: 0 24px;
-    @include mixin.section-desktop-view(65px);
+    @include mixin.section-desktop-view(65px, true);
     &__ilustration{
         width: 100%;
         margin-bottom: 80px;

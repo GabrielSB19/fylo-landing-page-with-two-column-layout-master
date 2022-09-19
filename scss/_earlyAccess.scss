@@ -1,0 +1,42 @@
+@use 'variable';
+@use 'mixin';
+
+.early-access{
+    border: 1px solid red;
+    background-color: variable.$DesaturatedBlue;
+    color: variable.$LightGray;
+    padding: 58px 62px 69px 38px;
+    @include mixin.section-desktop-view(244px, false);
+
+    &__title{
+        color: variable.$White;
+        text-align: center;
+        margin-bottom: 28px;        
+    }
+    &__description{
+        text-align: center;
+        font-size: 0.9em;
+        margin-bottom: 28px;
+    }
+    &__form{
+        @include mixin.form;
+    }
+}
+
+@media (min-width:1440px){
+    .early-access{
+        &__title{
+            text-align: left;
+        }
+        &__description{
+            text-align: left;
+        }
+        &__form{
+            width: 484px;
+            input[type="submit"]{
+                width: 50%;
+                font-size: 0.8em;
+            }
+        }
+    }
+}
