@@ -1,0 +1,61 @@
+@use 'variable';
+@use 'mixin';
+
+.footer{
+    background-color: variable.$VeryDarkBlue;
+    color: variable.$LightGrayishBlue;
+    padding: 65px 65px 45px 39px;
+    &__logo{
+        margin-bottom: 30px;
+    }
+    &__phone-container{
+        display: flex;
+        gap: 20px;
+        height: 20px;
+        margin-bottom: 20px;
+        a {
+            text-decoration: none;
+            color: variable.$LightGrayishBlue;
+            &:hover{
+                color: variable.$BrightBlue;
+                transition: 0.4s;
+            }
+        }
+    }
+    &__email-container{
+        @extend .footer__phone-container;
+    }
+    ul{
+        line-height: 32px;
+        margin-bottom: 16px;
+        li{
+            list-style: none;
+            &:hover{
+                cursor: pointer;
+                color: variable.$BrightBlue;
+                transition: 0.4s;
+            }
+        }
+    }
+    &__social-media-container{
+        display: flex;
+        justify-content: center;
+        height: 100px;
+        align-items: center;
+        gap: 30px;
+        .social-icon{
+            border: 1px solid variable.$LightGrayishBlue;
+            width: 28px;
+            height: 28px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            &:hover{
+                cursor: pointer;
+                border-color: variable.$BrightBlue;
+                transition: 0.4s;
+                color: variable.$BrightBlue;
+            }
+        }
+    }
+}
