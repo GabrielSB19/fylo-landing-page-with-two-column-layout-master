@@ -13,6 +13,7 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin: 18px 0;
 }
 
 .attribution a {
@@ -105,6 +106,9 @@ body {
 }
 
 @media (min-width: 1440px) {
+  .early-access {
+    height: 300px;
+  }
   .early-access__title {
     text-align: left;
   }
@@ -175,8 +179,15 @@ body {
   color: hsl(224deg, 93%, 58%);
 }
 
+@media (min-width: 1440px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 108px 256px 72px 80px;
+  }
+}
 .main-container {
-  border: 1px solid red;
   width: 375px;
   margin: auto;
 }

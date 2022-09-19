@@ -59,3 +59,12 @@
         }
     }
 }
+
+@media (min-width: 1440px){
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 108px 256px 72px 80px;
+    }
+}
