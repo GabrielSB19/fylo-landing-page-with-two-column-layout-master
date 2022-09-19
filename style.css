@@ -47,6 +47,11 @@ body {
   font-weight: 700;
 }
 
+@media (min-width: 1440px) {
+  .card {
+    margin: 0;
+  }
+}
 .main-container {
   border: 1px solid red;
   width: 375px;
@@ -234,6 +239,30 @@ body {
   text-align: center;
   margin-bottom: 40px;
   color: hsl(170deg, 45%, 43%);
+}
+
+@media (min-width: 1440px) {
+  .details {
+    height: 677px;
+  }
+  .details__ilustration {
+    width: 550px;
+  }
+  .details .details-content {
+    height: 498px;
+  }
+  .details .details-content__title {
+    text-align: left;
+    font-size: 2.5em;
+  }
+  .details .details-content__paragraph {
+    width: 520px;
+    font-size: 1em;
+    line-height: 25px;
+  }
+  .details .details-content__link {
+    text-align: left;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
